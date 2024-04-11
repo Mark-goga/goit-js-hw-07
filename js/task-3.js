@@ -1,27 +1,11 @@
-class StringBuilder {
-  #value;
-  constructor(value) {
-    this.#value = value;
-  }
-  getValue() {
-    return this.#value;
-  } 
-  padEnd(str) { 
-    this.#value = `${this.#value}${str}`;
-  }
-  padStart(str) { 
-    this.#value = `${str}${this.#value}`;
-  }
-  padBoth(str) { 
-    this.#value = `${str}${this.#value}${str}`;
-  }
-}
-
-const builder = new StringBuilder(".");
-console.log(builder.getValue()); // "."
-builder.padStart("^");
-console.log(builder.getValue()); // "^."
-builder.padEnd("^");
-console.log(builder.getValue()); // "^.^"
-builder.padBoth("=");
-console.log(builder.getValue()); // "=^.^="
+const inputEl = document.getElementById("name-input");
+const spanEl = document.getElementById("name-output")
+console.dir(spanEl);
+inputEl.addEventListener('input', (even) => {
+    const trimmedValue = inputEl.value.trim();
+    if (trimmedValue === "") {
+        spanEl.textContent = 'Anonymous';
+    } else {
+        spanEl.textContent = trimmedValue;
+    }
+});
