@@ -28,7 +28,7 @@ const listEl = document.querySelector(".gallery");
 let textForElem = ''
 images.forEach((image) => {
   textForElem += `<li class="galery-item">
-    <img src=${image.url} alt=${image.alt}/>
+    <img src=${image.url} alt=${image.alt} width="360px" height= "300px"/>
   </li>`
 })
 
