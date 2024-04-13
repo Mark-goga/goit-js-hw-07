@@ -4,6 +4,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 function createBoxes(amount) {
+  destroyBoxes();
   let textForElem = '';
   let widthAndHeight = 30;
   if (amount <= 100) {
